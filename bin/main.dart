@@ -1,4 +1,4 @@
-import 'package:data/imports.dart';
+import 'package:data/exchange.dart';
 
 void main() {
   checkData(JsonData(), 'files/sample.json');
