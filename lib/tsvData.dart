@@ -2,7 +2,7 @@ import 'exchange.dart';
 
 class TsvData implements DelimitedData {
   List<List<String>> _data = [];
-  String _fileName;
+  String _fileName = '';
 
   @override
   void load(String fileName) {
@@ -46,7 +46,7 @@ class TsvData implements DelimitedData {
         final firstLine = lines[0];
         final fields = firstLine.split(delimiter);
         if (fields.isNotEmpty) {
-          _data = rows.map((line) => line.split(delimiter)).toList();
+          _data = lines.map((line) => line.split(delimiter)).toList();
           return;
         }
       }
